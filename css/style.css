@@ -180,6 +180,28 @@ a {
 	transition: all ease-out 0.2s;
 }
 
+#to-form {
+	position: fixed;
+	top: 100px;
+	right: 30px;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #343434;
+	box-shadow: 2px 2px 5px #343434;
+	border-radius: 50%;
+	background: radial-gradient(circle at 65% 15%, white 1px, #f17107 3%, #b95503 60%, #f17107 100%);  
+	font-size: 1.2em;
+	z-index: 100;
+}
+
+#to-form:hover {
+	background: radial-gradient(circle at 65% 15%, white 1px, #c25a05 3%, #883e02 60%, #b45304 100%);  
+}
+
+.fa-arrow-circle-down {
+	font-size: 1.5em;
+}
+
 .banner {
 	display: flex;
 	flex-direction: column;
@@ -536,14 +558,21 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 }
 
 .portfolio__gallery img {
-	width: 387px;
-	height: 257px;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease-in;
+}
+
+.picture:hover.picture img {
+	overflow: hidden;
+	transform: scale(1.1);
 }
 
 .picture {
 	position: relative;
 	width: 387px;
 	height: 257px;
+	overflow: hidden;
 }
 
 .picture-mask {
@@ -560,7 +589,6 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 }
 
 .picture-mask .fas {
-	padding: 15px;
 	border-radius: 50%;
 	border: transparent;
 	transition: all ease-out 0.5s;
@@ -579,6 +607,19 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 .picture-mask:hover .fas:hover {
 	background-color: rgba(255, 255, 255,.7);
 	color: #ff7e26;
+}
+
+.picture-mask__description {
+	position: absolute;
+	width: 100%;
+	max-height: 0;
+	bottom: 0px;
+	color: #615c5c;
+	background-color: rgba(255, 255, 255,.7);
+	background: transparent;
+	transition: all 0.4s ease-in-out;
+	line-height: 50px;
+	text-transform: uppercase;
 }
 
 .buy-field {
@@ -835,27 +876,21 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 	margin-left: 60px;
 }
 
-.row-add {
-	display: flex;
-	justify-content: space-between;
-	border-bottom: 1px solid #fff;
-	padding: 18px 0;
-}
-
-
-.services__collapse-content {
-	display: none;
-}
-
-.services__collapse-enable {
+.service__content {
 	display: block;
+	max-height: 0;
+	color: transparent;
+	overflow: hidden;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #fff;
+	transition: all 0.2s ease-out;
 }
 
-
-.services__collapse {
+.service {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px solid #fff;
+	flex-wrap: wrap;
 	padding-bottom: 18px;
 }
 
@@ -874,7 +909,7 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 	font-size: 14px;
 }
 
-.row-add i, .services__collapse  i {
+.service  i {
 	width: 15px;
 	height: 15px;
 	background-color: #ff7200;
