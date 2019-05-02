@@ -7,12 +7,48 @@ let form = document.querySelector("footer");
 let leftComm = document.querySelector(".slider-switch__btn-lelt");
 let rightComm = document.querySelector(".slider-switch__btn-right");
 
-let comments = document.querySelectorAll(".comments-list__comment");
-let comment = 0;
+let leftBanner = document.querySelector(".banner__arrows__banner__left");
+let rightBanner = document.querySelector(".banner__arrows__banner__right");
+
+let banners = document.querySelectorAll(".banner__slider-slide");
+let banner = 0;
+let countItem = document.querySelectorAll(".heading-items__item");
 
 let slide = 0;
 let scrolled;
 let target = form.getBoundingClientRect().top;
+
+let comments = document.querySelectorAll(".comments-list__comment");
+let comment = 0;
+
+leftBanner.addEventListener("click", function() {
+	banners[banner].className = "";
+	countItem[banner].className = "";
+	banners[banner].className = "banner__slider-slide";
+	countItem[banner].className = "heading-items__item";
+
+	banner--;
+	if (banner < 0) {
+		banner = banners.length - 1;
+	}
+	banners[banner].className = "banner__slider-show";
+	countItem[banner].className = "heading-items__item-this";
+
+})
+
+rightBanner.addEventListener("click", function() {
+	banners[banner].className = "";
+	countItem[banner].className = "";
+	banners[banner].className = "banner__slider-slide";
+	countItem[banner].className = "heading-items__item";
+
+	banner++;
+	if (banner >= banners.length) {
+		banner = 0;
+	}
+	banners[banner].className = "banner__slider-show";
+	countItem[banner].className = "heading-items__item-this";
+})
 
 anchor.addEventListener("click", function() {
 	scrolled = window.pageYOffset;
