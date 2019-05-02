@@ -4,6 +4,11 @@ let nextSwitch = document.querySelector(".slider__switch-right");
 let openUp = document.getElementsByClassName("fa-plus")
 let images = document.querySelectorAll(".slider img");
 let form = document.querySelector("footer");
+let leftComm = document.querySelector(".slider-switch__btn-lelt");
+let rightComm = document.querySelector(".slider-switch__btn-right");
+
+let comments = document.querySelectorAll(".comments-list__comment");
+let comment = 0;
 
 let slide = 0;
 let scrolled;
@@ -76,3 +81,23 @@ for(i = 0; i < search.length; i++) {
 		}
 	})
 }
+
+leftComm.addEventListener("click", function() {
+	comments[comment].className = "";
+	comments[comment].className = "comments-list__comment";
+	comment--;
+	if (comment < 0) {
+		comment = comments.length - 1;
+	}
+	comments[comment].className = "comments-list__comment-show";
+})
+
+rightComm.addEventListener("click", function() {
+	comments[comment].className = "";
+	comments[comment].className = "comments-list__comment";
+	comment++;
+	if (comment >= comments.length) {
+		comment = 0;
+	}
+	comments[comment].className = "comments-list__comment-show";
+})
