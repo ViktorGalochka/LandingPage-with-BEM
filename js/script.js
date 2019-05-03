@@ -1,4 +1,6 @@
 let anchor = document.getElementById("to-form");
+let burger = document.querySelector(".fa-bars");
+let nav = document.querySelector(".header-nav");
 let prevSwitch = document.querySelector(".slider__switch-left");
 let nextSwitch = document.querySelector(".slider__switch-right");
 let openUp = document.getElementsByClassName("fa-plus")
@@ -20,6 +22,26 @@ let target = form.getBoundingClientRect().top;
 
 let comments = document.querySelectorAll(".comments-list__comment");
 let comment = 0;
+
+anchor.addEventListener("click", function() {
+	scrolled = window.pageYOffset;
+	scrollToForm();
+})
+function scrollToForm() {
+	if(scrolled < target) {
+		window.scrollTo(0, scrolled);
+		scrolled += 100;
+		requestAnimationFrame(scrollToForm);
+	}
+	else {
+		// scrolled = target;
+		window.scrollTo(0, target);
+	}
+}
+
+burger.addEventListener("click", function() {
+	nav.classList.toggle("header-nav-on");
+})
 
 leftBanner.addEventListener("click", function() {
 	banners[banner].className = "";
@@ -49,22 +71,6 @@ rightBanner.addEventListener("click", function() {
 	banners[banner].className = "banner__slider-show";
 	countItem[banner].className = "heading-items__item-this";
 })
-
-anchor.addEventListener("click", function() {
-	scrolled = window.pageYOffset;
-	scrollToForm();
-})
-function scrollToForm() {
-	if(scrolled < target) {
-		window.scrollTo(0, scrolled);
-		scrolled += 100;
-		requestAnimationFrame(scrollToForm);
-	}
-	else {
-		// scrolled = target;
-		window.scrollTo(0, target);
-	}
-}
 
 prevSwitch.addEventListener("click", function() {
 	images[slide].className = "";
