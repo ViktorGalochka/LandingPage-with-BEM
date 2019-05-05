@@ -5,7 +5,7 @@ let prevSwitch = document.querySelector(".slider__switch-left");
 let nextSwitch = document.querySelector(".slider__switch-right");
 let openUp = document.getElementsByClassName("fa-plus")
 let images = document.querySelectorAll(".slider img");
-let form = document.querySelector(".basement");
+let form = document.querySelector(".basement__reference");
 let leftComm = document.querySelector(".slider-switch__btn-lelt");
 let rightComm = document.querySelector(".slider-switch__btn-right");
 

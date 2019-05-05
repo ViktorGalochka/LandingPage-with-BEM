@@ -144,7 +144,7 @@ a {
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
-	z-index: 6;
+	z-index: 101;
 }
 
 .nav-item__submenu li {
@@ -1570,7 +1570,7 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 	}
 	
 	.responses {
-		height: 80vh;
+		height: 100vh;
 		padding: 0 50px;
 	}
 	
