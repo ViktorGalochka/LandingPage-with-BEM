@@ -766,11 +766,9 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 }
 
 .slider-switch {
-	position: absolute;
 	display: flex;
+	justify-content: center;
 	width: 100%;
-	top: calc(85% - 23px);
-	left: calc(50% - 45px);
 	font-size: 50px;
 }
 
@@ -1341,6 +1339,8 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 		left: 100px;
 		top: 10px;
 		display: block;
+		background-color: #353434;
+		border-radius: 5px;
 	}
 	
 	.collapse-nav {
@@ -1361,6 +1361,10 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 		left: 100px;
 	}
 	
+	.slider-switch {
+		margin-top: 20px;
+	}
+
 	.about-us {
 		margin-left: 30px;
 		margin-right: 30px;
@@ -1486,7 +1490,11 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 	.responses h2 {
 		text-align: center;
 	}
-	
+
+	.slider-switch {
+		margin-top: 50px;
+	}
+
 	.advantages {
 		margin: 50px;
 	}
@@ -1648,14 +1656,14 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 		line-height: 20px;
 	}
 	
+	.slider-switch {
+		margin-top: 80px;
+	}
+
 	.buy-field__buttons button {
 		margin-top: 10px;
 		padding: 12px 25px;
 		font-size: 0.8em;
-	}
-	
-	.slider-switch {
-		top: calc(92% - 23px);
 	}
 	
 	.inner-advantages__slider-monitor img {
@@ -1773,10 +1781,6 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 		font-size: 0.8em;
 	}
 	
-	.slider-switch {
-		top: calc(88% - 23px);
-	}
-	
 	.inner-advantages__slider-monitor img {
 		width: 300px;
 		height: 250px;
@@ -1801,10 +1805,6 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 }
 
 @media (max-width: 400px) {
-	.header-nav-on {
-		left: 50px;
-	}
-
 	.heading-items li {
 		font-size: 0.7em;
 	}
@@ -1850,13 +1850,13 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 		
 	}
 	
+	.slider-switch {
+		margin-top: 100px;
+	}
+
 	.buy-field__buttons button {
 		padding: 12px 15px;
 		font-size: 0.7em;
-	}
-	
-	.slider-switch {
-		top: calc(92% - 23px);
 	}
 	
 	.inner-advantages__slider-monitor img {
@@ -1872,6 +1872,14 @@ a .fa-facebook-f:hover, a .fa-twitter:hover,  a .fa-tumblr:hover, a .fa-linkedin
 		Font-size: 0.5em;
 	}
 }
+
+@media (max-width: 360px) {
+	.header-nav-on {
+		left: 50px;
+	}
+
+}
+
 
 @media (max-width: 325px) {
 	.header-nav-on {
